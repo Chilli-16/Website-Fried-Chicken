@@ -1,0 +1,29 @@
+
+.food-display {
+  display: flex;
+  overflow-x: hidden; /* Ẩn thanh cuộn ở cấp độ cha */
+}
+
+.food-display-list { 
+  display: flex; /* Sử dụng flexbox để sắp xếp các món ăn theo hàng */
+  gap: 2rem; /* Khoảng cách giữa các món ăn */
+  overflow-x: auto; 
+  padding: 1rem 1rem 0 0rem ;
+}
+
+.food-display-list::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn ở trình duyệt Webkit (Chrome, Safari) */
+}
+
+.food-item {
+  flex: 0 0 250px; /* Chiều rộng cố định cho mỗi món ăn */
+  height: auto; /* Chiều cao tự động */
+}
+
+
+.food-item-image {
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử */
+  height: auto; /* Giữ tỷ lệ hình ảnh */
+}
+
+

@@ -1,0 +1,154 @@
+
+.navbar {
+  padding: 0 0 0 3.5rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  max-height: 5rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  flex: 1;
+  justify-content: space-around;
+  margin-top: -2.5rem;
+  font-weight: 600;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  list-style: none;
+  flex-grow: 1;
+  gap: 3rem;
+  color: #2c2c2c;
+  margin-right: 4rem;
+  margin-top: -2.5rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  list-style: none;
+  justify-content: flex-start; /* Căn trái */
+  color: #2c2c2c; /* Màu chữ */
+  margin-right: 0; /* Đặt lại giá trị margin-right về 0 */
+}
+
+
+
+
+.navbar-nav .nav-link {
+  color: #000;
+  margin-right: 20px;
+  text-decoration: none; /* Remove default underline */
+  padding: 10px 15px; /* Add some padding for better click area */
+}
+.navbar-menu .active {
+  text-decoration: underline; /* Add underline for the active link */
+  font-weight: bold; /* Optional: Make active link bold */
+}
+.navbar-nav .nav-link:hover {
+  color: darkred;
+  font-weight: 800;
+}
+
+
+.navbar-icons{
+  position: relative;
+}
+
+.dotbag {
+  position: absolute;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: tomato;
+  border-radius: 50%;
+  top: 1.5rem;
+  right: 7rem;
+}
+
+.navbar-right .fa-icon,
+.navbar-right .fa-magnifying-glass,
+.navbar-icons-bag a,
+.navbar-profile .fa-circle-user{
+    color: #000; /* Màu mặc định của icon */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.navbar-right .fa-icon:hover,
+.navbar-right .fa-magnifying-glass:hover,
+.navbar-icons-bag a:hover,
+.navbar-profile .fa-circle-user:hover {
+    color: rgba(139, 0, 0, 0.8); /* Màu khi hover, ví dụ là màu tomato */
+}
+
+
+.fa-icon {
+  cursor: pointer;
+  color: #000;
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 6px 25px;
+  border-radius: 8px;
+  border: 2px solid ☐ tomato;
+  outline: 2px solid white;
+  list-style: none;
+}
+
+.nav-profile-dropdown li{
+  display: flex; 
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  }
+  .nav-profile-dropdown li:hover{
+    color: rgba(139, 0, 0, 1);
+  }
+
+  .nav-profile-dropdown p{
+    margin-top: 15px;
+    }
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dotbag{
+    top: 15px;
+    right: 45px;
+  }
+}
+
+

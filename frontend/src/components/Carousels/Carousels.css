@@ -1,0 +1,18 @@
+
+.carousel {
+  display: flex;
+  margin-top: 2rem; 
+  padding: 0 1rem 0 5.5rem ;
+  width: 100%; 
+}
+
+.carousel-item {
+  text-align: center; 
+}
+
+.poster1, .poster2, .poster3 {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  display: block; /* Đảm bảo hình ảnh hiển thị như một khối */
+}

@@ -1,0 +1,113 @@
+.p-3 {
+  display: flex;
+  
+}
+
+.login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 850px;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.close-icon{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+
+}
+
+.imgeSignin {
+  flex: 1;
+  padding: 2vw;
+  display: flex;
+}
+
+.formlogin {
+  flex: 1;
+  padding: 1vw;
+  font-size: 1.2vw;
+  margin: 1vw;
+  color: #000;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.inline-text {
+  margin-left: 10px;
+  margin-bottom: 0;
+  display: inline-flex;
+  /* hoặc flex nếu cần */
+  align-items: center;
+}
+
+.clickhere {
+  margin-left: 1.6vw;
+}
+
+.siginwith{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 10vw;
+  font-size: 1.2vw;
+}
+
+
+@media (max-width: 768px) {
+  .login-popup {
+    flex-direction: column;
+    /* Chuyển thành cột trên màn hình nhỏ */
+    width: 95%;
+    /* Chiều rộng 95% cho màn hình nhỏ */
+    margin-top: -90px;
+    height: 580px;
+    padding: 0px;
+  }
+
+  .imgeSignin,
+  .formlogin {
+    width: 100%;
+  }
+  .imgeSignin{
+    height: 400px;
+  }
+
+  .formlogin {
+    padding: 0px;
+    flex: 1.5;
+    font-size: 15px;
+    margin-top: -50px;
+  }
+  .clickhere {
+    margin-left: 5vw;
+  }
+  .siginwith{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 5vw;
+    font-size: 15px;
+  }
+  .close-icon{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  
+  }
+  
+}

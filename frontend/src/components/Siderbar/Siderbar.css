@@ -1,0 +1,252 @@
+.sidebar {
+    background-color: white;
+    position: fixed; /* Thay đổi từ absolute sang fixed */
+    top: 0;
+    left: 0;
+    padding: 2rem 2rem;
+    width: 15rem;
+    height: 100vh;
+    transition: 0.5s all;
+    z-index: 1000; /* Đảm bảo thanh sidebar hiển thị phía trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar .logoContainer h2.title {
+    font-size: 31.42px;
+    color: #cd342e;
+    padding: 0 0 0 1rem;
+}
+
+.sidebar .burgerContainer {
+    background-color: #cd342e;
+    position: absolute; 
+    right: -17.5px; 
+    top: calc(7.5rem / 1.15);
+    width: 35px;
+    height: 35px;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.sidebar .burgerContainer .burgerTrigger {
+    width: 35px;
+    height: 35px;
+    background-color: #cd342e;
+    cursor: pointer;
+    z-index: 6;
+    opacity: 0;
+    position: relative;
+}
+
+.sidebar .burgerContainer .burgerMenu {
+    background-color: #cd342e;
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 3px;
+    border-radius: 2rem;
+    bottom: calc(35px / 2);
+    left: 0.45rem;
+    transition: 0.5s all;
+}
+
+.sidebar .burgerContainer .burgerMenu::after,
+.sidebar .burgerContainer .burgerMenu::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    border-radius: 2rem;
+    transition: 0.5s all;
+}
+
+.sidebar .burgerContainer .burgerMenu::after {
+    top: 0.4rem;
+    transform: translateY(-0.4rem) rotate(45deg);
+}
+
+.sidebar .burgerContainer .burgerMenu::before {
+    top: -0.4rem;
+    transform: translateY(0.4rem) rotate(-45deg);
+}
+
+.sidebar .burgerContainer::after {
+    content: "";
+    position: absolute;
+    right: 35px;
+    top: 17.5px; /* Điều chỉnh cho phù hợp */
+    z-index: 0;
+    width: calc(6rem + 15rem);
+    background-color: #f2f0f3;
+    height: 2px;
+    transition: 0.5s all;
+}
+
+.sidebar .profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2.5rem 0 0 0;
+}
+
+
+.sidebar .profileContainer .profileContents {
+    padding: 0 0 0 1rem;
+}
+
+.sidebar .profileContainer .profileContents p.name {
+    padding: 0;
+    margin: 0;
+    font-size: 16.7px;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.sidebar .profileContainer .profileContents p {
+    padding: 0;
+    margin: 0;
+    font-size: 13.9px;
+    color: black;
+}
+
+.sidebar .contentsContainer {
+    margin: 2rem 0 0 0;
+}
+
+.sidebar .contentsContainer ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .contentsContainer li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0.3rem 0;
+    padding: 0.75rem 0.75rem;
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.sidebar .contentsContainer li .fa-icon {
+    color: #cd342e;
+    padding: 0 0.5rem 0.1rem;
+}
+
+.sidebar .contentsContainer li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 0.5rem;
+}
+
+.sidebar .contentsContainer li.active {
+    background-color: #f2f0f3;
+}
+
+.sidebar .contentsContainer li.active a {
+    color: #cd342e;
+}
+
+.sidebar .contentsContainer li:hover {
+    background-color: rgba(205, 52, 46);
+    transition: 0.25s;
+}
+
+.sidebar.active {
+    width: 3rem;
+    transition: 0.5s all;
+}
+.logoContainer h2.title {
+    position: relative;
+    left: -1rem;
+}
+
+.logoContainer.active h2.title {
+    opacity: 0;
+}
+
+.burgerContainer.active {
+    transition: 0.5s all;
+}
+
+.burgerContainer.active .burgerMenu {
+    background-color: white;
+}
+
+.burgerContainer.active .burgerMenu::before {
+    transform: translateY(0rem) rotate(0deg);
+}
+
+.burgerContainer.active .burgerMenu::after {
+    transform: translateY(0rem) rotate(0deg);
+}
+
+.profileContainer.active .profileContents {
+    opacity: 0;
+}
+
+.contentsContainer.active a {
+    opacity: 0;
+}
+
+.sidebar .logoContainer .logo {
+    width: 70%; /* Để hình ảnh chiếm toàn bộ chiều rộng của container */
+    height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+.sidebar .profileContainer img {
+    width: 3rem; /* Điều chỉnh kích thước cho hình ảnh profile */
+    height: 3rem; /* Điều chỉnh kích thước cho hình ảnh profile */
+    border-radius: 50%; /* Làm cho hình ảnh trở thành hình tròn */
+}
+.sidebar.active .profileContainer img.profile {
+    display: none; /* Ẩn hình ảnh profile khi sidebar ở trạng thái active */
+}
+
+.sidebar.active .profileContainer .profileContents {
+    opacity: 0; /* Ẩn nội dung profile */
+}
+
+.sidebar .contentsContainer li .fa-icon {
+    padding: 0 1rem 0 0.1rem; /* Thay đổi khoảng cách ở đây nếu cần */
+    margin-right: 0.1rem; /* Thêm margin-right để tạo khoảng cách giữa icon và văn bản */
+}
+
+.sidebar .profileContainer .fa-icon {
+    width: auto;
+    height: 2rem;
+}
+
+.sidebar.active .contentsContainer li {
+    position: relative;
+    top:-10rem;
+    right: 5px;
+    margin: 0.1rem 0;
+    padding: 0.2rem 0.7rem;
+}
+
+.sidebar.active .contentsContainer li .fa-icon {
+    position: relative;
+    right: 10px;
+    padding: 0 0rem 0 0rem; /* Thay đổi khoảng cách ở đây nếu cần */
+    margin-right: 0rem; /* Thêm margin-right để tạo khoảng cách giữa icon và văn bản */
+}

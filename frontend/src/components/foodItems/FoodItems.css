@@ -1,0 +1,123 @@
+.foodCart{
+  display: flex;
+  padding: 0 1rem 0 5.5rem ;
+}
+.food-item {
+  width: 100%;
+  max-width: 20rem;
+  border: 2px solid rgb(248, 247, 247);
+  /* Border ban đầu là trong suốt */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* Hiệu ứng chuyển đổi cho border và bóng */
+}
+
+@media (min-width: 960px) {
+  .food-item {
+    width: 100%;
+    max-width: 30vw;
+    /* margin-left: 3vw;
+      margin-right: 2.5vw; */
+    border: 2px solid rgb(248, 247, 247);
+    /* Border ban đầu là trong suốt */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+}
+
+.food-item:hover {
+  border-color: rgba(139, 0, 0, 0.5);
+  /* Màu border khi hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Bóng đổ khi hover */
+}
+
+.food-item-image {
+  position: relative;
+}
+
+
+.food-item-name {
+  margin-right: auto;
+  font-size: 3.5vw;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 550;
+  text-align: justify;
+}
+
+@media (min-width: 960px) {
+  .food-item-name {
+    font-size: 15px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 550;
+    margin-right: auto;
+    text-align: justify;
+  }
+}
+
+.food-item-desc{
+  text-align: justify;
+}
+
+.container-fluid {
+  display: flex;
+  padding: 0;
+  margin-top: -5px;
+}
+
+
+ .container-fluid .food-item-price {
+  display: flex;
+  flex: 1;
+  font-size: 20px;
+  justify-self: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: darkred;
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  animation: move 1s ease-in-out infinite; 
+}
+@keyframes move {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+.container-fluid .add {
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+.container-fluid{
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+
+.container-fluid .add:hover {
+  color: darkred; /* Thay đổi màu chữ khi hover */
+  transform: scale(1.05); /* Phóng to 5% khi hover */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ cho chữ */
+}
+
+.container-fluid .food-item-counter {
+  display: flex;
+  cursor: pointer;
+  flex: 1;
+  gap: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-top: -5px;
+  border: 1px solid rgb(248, 247, 247); /* Màu viền mặc định */
+  border-radius: 15px; /* Bo tròn viền */
+  align-items: center;
+  background-color: rgba(212, 142, 156, 0.1); /* Màu nền nhẹ để tạo chiều sâu */
+}
+
+.container-fluid .food-item-counter p {
+  font-size: 15px;
+  margin: 0; /* Đặt margin về 0 để tránh đẩy nội dung */
+}
+

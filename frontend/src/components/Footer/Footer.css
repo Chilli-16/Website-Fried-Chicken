@@ -1,0 +1,63 @@
+.contact {
+  margin: 10px;
+  padding: 2rem 1rem 0 5.5rem;
+}
+
+.d-flex {
+  color: white;
+  padding: 2rem 1rem 0 5.5rem;
+}
+
+.contact .text-center {
+  color: white;
+}
+
+.text-center {
+  color: white;
+}
+
+.text-center-right {
+  color: white;
+  padding: 0.5rem 1rem 0 4rem;
+}
+
+.text-reset {
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+
+.heading-line {
+  margin-top: -50px;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  padding: 20px;
+  ;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.me-4 {
+  font-size: x-large;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-left: 3.4rem;
+  padding: auto;
+}
+
+.logo_foodter{
+  padding: 2.5rem;
+  position: relative;
+  left: 18rem;
+  top: 3rem;
+  height: 180px;
+}

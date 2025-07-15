@@ -1,0 +1,37 @@
+.map-container {
+    padding: 3.5rem 0 0 5rem;
+    width: 100%;
+  }
+  .map-container h1{
+    padding: 0 0 2rem 0 ;
+  }
+
+  .map-container p{
+    padding: 0.5rem 0 0 0 ;
+  }
+  .map-container a{
+    padding: 4rem, 0, 0, 0 ;
+  }
+  
+  
+  .store-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: none solid #ccc;
+    overflow: hidden;
+    border-radius: 10px;    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .store-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .store-map {
+    flex: 2;
+    min-width: 300px;
+  }
+  
