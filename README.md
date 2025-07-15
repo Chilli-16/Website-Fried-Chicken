@@ -43,7 +43,7 @@ A full-stack web application that enables users to browse KFC-style dishes, plac
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/kfc-ordering-website.git
-cd kfc-ordering-website
+git clone https://github.com/Chilli-16/Website-Fried-Chicken.git
+cd Website-Fried-Chicken
 
 
